@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Professional Color Variables for Light Theme */
+:root {
+  --professional-50: #f0fdfa;
+  --professional-100: #ccfbf1;
+  --professional-200: #99f6e4;
+  --professional-300: #5eead4;
+  --professional-400: #2dd4bf;
+  --professional-500: #14b8a6;
+  --professional-600: #0d9488;
+  --professional-700: #0f766e;
+  --professional-800: #115e59;
+  --professional-900: #134e4a;
+}
+
+/* Professional Color Variables for Dark Theme */
+.dark {
+  --professional-50: #134e4a;
+  --professional-100: #115e59;
+  --professional-200: #0f766e;
+  --professional-300: #0d9488;
+  --professional-400: #14b8a6;
+  --professional-500: #2dd4bf;
+  --professional-600: #5eead4;
+  --professional-700: #99f6e4;
+  --professional-800: #ccfbf1;
+  --professional-900: #f0fdfa;
+}
+
+/* Custom scrollbar */
+/* Scrollbar Genel */
+/* Scrollbar Genel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f0f5; /* Açık mod track */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05); /* Hafif iç gölge */
+  transition: background 0.3s ease;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0c0f14; /* Koyu mod track */
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.3); /* Daha belirgin gölge */
+  transition: background 0.3s ease;
+}
+
+/* Thumb - Açık Mod */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7A5BFF, #9460FF); /* Hafif gradient efekti */
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(122,91,255,0.6); /* Hafif glow efekti */
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9460FF, #B870FF); /* Hover gradient */
+  box-shadow: 0 0 12px rgba(184,112,255,0.7); /* Hover’da glow artışı */
+}
+
+/* Thumb - Dark Mod */
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #A885FF, #be85ff); /* Gradient aurora */
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(168,133,255,0.6); /* Glow efekti */
+  transition: all 0.3s ease;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #be85ff, #D2A1FF); /* Hover gradient */
+  box-shadow: 0 0 12px rgba(190,133,255,0.8); /* Hover glow artışı */
+}
+
+
+
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Override for elements that shouldn't have transitions */
+button, a, input, textarea, select {
+  transition-property: background-color, border-color, color, transform, opacity;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: #2dd4bf;
+  color: #0f172a;
+}
+
+.dark ::selection {
+  background-color: #0d9488;
+  color: #f1f5f9;
+}
+.App {
+  z-index: 0;
+}
+
+/* Hide Emergent badge */
+#emergent-badge,
+a[href*="emergent"],
+a[id*="emergent"],
+a[href*="app.emergent"],
+[id*="emergent"],
+[style*="emergent"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
