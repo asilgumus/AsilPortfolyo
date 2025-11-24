@@ -17,3 +17,7 @@ Hi, I'm Asil Doğan Gümüş. This is my personal portfolio website, designed to
 - Backend: **FastAPI**, Python
 - Database: **MongoDB**
 - Deployment: Netlify / Vercel / Heroku (your choice)
+
+# LICENSE
+!!!
+No part of this software or its documentation may be used, copied, modified, or distributed without explicit written permission from the author.
